@@ -6,8 +6,8 @@ function ReviewItem({ review }) {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   let button;
+  //"http://localhost:5000/"
   let img = "https://darkgamereviews.herokuapp.com/" + review.imageURL;
-  console.log(review.imageURL)
   if (user) {
     button = (
       <button onClick={() => dispatch(deleteReview(review._id))}>X</button>
@@ -56,7 +56,7 @@ function ReviewItem({ review }) {
           <div className="row  ">
             <p className=" text-end ">
               <small className="text-muted  ">
-                {review.timePlayed}h on record / Auther: {review.auther} / Last Played: {review.dateOfPlay}
+                {review.timePlayed}h on record / Author: {review.auther} / Last Played: {review.dateOfPlay}
                 {button}
               </small>
             </p>
