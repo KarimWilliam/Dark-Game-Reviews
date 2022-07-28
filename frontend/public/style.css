@@ -40,12 +40,6 @@ body::before{
 }
 
 
-.square:before{
-  content: "";
-  display: block;
-  padding-top: 100%;  /* initial ratio of 1:1*/
-}
-
 .custombggreen{
   background-color: green;
 }
