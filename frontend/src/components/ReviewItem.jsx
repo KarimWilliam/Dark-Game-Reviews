@@ -1,11 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
 import { deleteReview } from "../features/reviews/reviewSlice";
+const API_URL = '/backend/images/'
 
 function ReviewItem({ review }) {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   let button;
-  let img = "http://localhost:5000/" + review.imageURL;
+  let img = "https://darkgamereviews.herokuapp.com/" + review.imageURL;
+  console.log(review.imageURL)
   if (user) {
     button = (
       <button onClick={() => dispatch(deleteReview(review._id))}>X</button>

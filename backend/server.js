@@ -12,7 +12,8 @@ connectDB();
 
 // Function to serve all static files
 // inside public directory.
-app.use(express.static('backend/images'));  //Serve static files/images
+app.use(express.static(path.join('backend/images')));  //Serve static files/images
+console.log(__dirname)
 
 app.use(fileUpload());
 app.use(express.json());
