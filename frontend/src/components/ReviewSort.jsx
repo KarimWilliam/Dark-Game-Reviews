@@ -48,7 +48,7 @@ function ReviewSort() {
         <option value="name">Name</option>
         <option value="rating">Rating</option>
         <option value="timePlayed">Time Played</option>
-        <option value="auther">Auther</option>
+        <option value="auther">Author</option>
         <option value="dateOfPlay">Last Played</option>
       </select>
       <input
