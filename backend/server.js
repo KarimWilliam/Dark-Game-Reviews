@@ -4,20 +4,25 @@ const { errorHandler } = require('./middleware/errorMiddleware');
 //const colors = require('colors');
 const dotenv = require('dotenv').config();
 const connectDB = require('./config/db');
+const fileUpload = require('express-fileupload')
 const port = process.env.PORT || 5000;
 const app = express();
 
 connectDB();
 
+// Function to serve all static files
+// inside public directory.
+app.use(express.static('backend/images'));  //Serve static files/images
+
+app.use(fileUpload());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/api/reviews', require('./routes/reviewRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
 
-// Serve frontend
+// //Serve frontend
 // if (process.env.NODE_ENV === 'production') {
 //     app.use(express.static(path.join(__dirname, '../frontend/build')));
-  
 //     app.get('*', (req, res) =>
 //       res.sendFile(
 //         path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')

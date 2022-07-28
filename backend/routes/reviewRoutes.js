@@ -6,10 +6,13 @@ const {
     setReview,
     deleteReview,
     updateReview,
+    setImg,
   } = require('../controllers/reviewController')
-
+//    '/api/reviews'   <-base
+router.route('/img').post(protect,setImg)
 
 router.route('/').get( getReviews).post(protect, setReview)
+
 router.route('/:id').delete(protect, deleteReview).put(protect, updateReview)
 
 module.exports = router

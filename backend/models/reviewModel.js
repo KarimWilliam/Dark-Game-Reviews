@@ -21,7 +21,15 @@ const reviewSchema = mongoose.Schema(
       },
       imageURL: {
         type: String,
-        required: false, //@REMINDER maybe should be required
+        required: true, 
+      },
+      auther: {
+        type: String,
+        required: false,
+      },
+      dateOfPlay: {
+        type: Number,
+        required: false,
       },
   },
   {

@@ -13,14 +13,23 @@
   "author": "karim william",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^7.3.0",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.2.0",
+    "bootstrap-icons": "^1.9.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
+    "express-fileupload": "^1.4.0",
+    "formidable": "^2.0.1",
+    "http-proxy-middleware": "^2.0.6",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.4.5"
+    "mongoose": "^6.4.5",
+    "react-search-autocomplete": "^7.2.2",
+    "react-select": "^5.4.0",
+    "react-select-search": "^3.0.10"
   }
 }
