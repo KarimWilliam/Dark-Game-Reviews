@@ -48,10 +48,10 @@ function ReviewFilter() {
         <input
           type="text"
           className="form-control"
-          placeholder="Number between 1 and 10"
+          placeholder="Number between 1 and 100"
           name="ratebiggerthan"
           id="ratebiggerthan"
-          pattern="[1-9]|10|M"
+          pattern="^[1-9][0-9]?$|^100$"
           required
           onChange={onChange}
         />
