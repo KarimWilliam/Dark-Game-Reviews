@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
 import { deleteReview } from "../features/reviews/reviewSlice";
-const API_URL = '/backend/images/'
 
 function ReviewItem({ review }) {
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ function ReviewItem({ review }) {
   
   return (
     //style={{ "maxHeight": 500 + "px" }}
-    <div className="container  p-5">
+    <div className="container-lg  p-5">
       <div className="row justify-content-md-center  p-5 bg-dark text-light border shadow border-info rounded">
         <div className="col-md-4 hide_border_sm text-center ">
           <img
@@ -47,7 +46,7 @@ function ReviewItem({ review }) {
             <div className="col-md-2  d-flex justify-content-center align-items-center  ">  {reviewrating} </div>   
           </div>
           <div className="row h-75  ">
-            <div className="container ">
+            <div className="container-lg ">
               <p className="lead text-center d-flex justify-content-center align-items-center h-100 ">
                 "{review.comment}"
               </p>

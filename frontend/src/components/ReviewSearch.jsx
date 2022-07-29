@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { bringToTop } from "../features/reviews/reviewSlice";
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+import { setPage } from "../features/pageSlice";
 
 
 function ReviewSearch() {
@@ -20,6 +21,8 @@ let x= reviews.map((e)=>{
     results.slice().reverse().forEach(element => {
       dispatch(bringToTop(element._id))
     });
+    dispatch(setPage(1))
+    
   }
 
   const handleOnHover = (result) => {

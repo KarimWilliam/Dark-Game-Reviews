@@ -8,18 +8,21 @@ import ReviewFilter from "../components/ReviewFilter";
 import ReviewSearch from "../components/ReviewSearch";
 import { useState } from "react";
 import Pagination from "../components/Pagination";
+import { setPage } from "../features/pageSlice";
+
 
 function Dashboard() {
   const dispatch = useDispatch();
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(5);
+  //const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(5);
 
-  const { user } = useSelector((state) => state.auth);
+  const {currentPage} = useSelector((state)=>state.page)
+
   useEffect(() => {
     dispatch(getReviews());
   }, [dispatch]);
 
-  const { reviews, isLoading, isError, message } = useSelector(
+  const { reviews, isLoading } = useSelector(
     (state) => state.review
   );
 
@@ -29,8 +32,9 @@ function Dashboard() {
   const currentreviews = reviews.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => {
-    if(pageNumber!="..."){
-      setCurrentPage(pageNumber);
+    if(pageNumber!=="..."){
+      dispatch(setPage(pageNumber))
+    //  setCurrentPage(pageNumber);
     }
 
   };
@@ -52,7 +56,7 @@ function Dashboard() {
         <ReviewFilter />
       </div>
 
-      <div className=" align-items-center  justify-content-between p-5 bg-secondary container">
+      <div className=" align-items-center  justify-content-between p-5 bg-secondary container-lg">
         {reviews.length > 0 ? (
           <div className="goals">
             {currentreviews.map((review) => (

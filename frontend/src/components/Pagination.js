@@ -1,4 +1,7 @@
 import React from "react";
+import { useState } from "react";
+
+
 
 const Pagination = ({ postsPerPage, totalPosts, paginate, pageNumber }) => {
   let  pageNumbers = [];
@@ -6,8 +9,8 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, pageNumber }) => {
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
   }
-
-
+  const [pageCSS] = useState('page-item');
+  const [pageCSS2] = useState('page-item active');
 const reducedPages=(pageNumber,pageNumbers)=>{
   let finalindex= pageNumbers.length;
     if (pageNumbers.length<7 ){return pageNumbers}
@@ -17,6 +20,7 @@ const reducedPages=(pageNumber,pageNumbers)=>{
     pageNumbers= pageNumbers.slice((pageNumber-3),(pageNumber+2))
     pageNumbers.push("...")
     pageNumbers.push(finalindex)
+    pageNumbers.unshift("...")
     pageNumbers.unshift(1);
     return pageNumbers
 }
@@ -29,7 +33,7 @@ pageNumbers=reducedPages(pageNumber,pageNumbers);
       <li key={-1} className="page-item">
         <a
           onClick={() => paginate(pageNumber + 1)}
-          href="#"
+          href="/#"
           className="page-link">
           Next
         </a>
@@ -44,7 +48,7 @@ pageNumbers=reducedPages(pageNumber,pageNumbers);
       <li key={-2} className="page-item">
         <a
           onClick={() => paginate(pageNumber - 1)}
-          href="#"
+          href="/#"
           className="page-link"
         >
           Prev
@@ -56,13 +60,22 @@ pageNumbers=reducedPages(pageNumber,pageNumbers);
   }
 
 
+const onClickPage= (number)=>{
+  console.log("pagenumber: "+pageNumber)
+  console.log("number: "+number)
+
+
+  paginate(number)
+}
+
+
   return (
     <nav>
       <ul className="pagination justify-content-center pt-5">
       {prevkey}
         {pageNumbers.map((number) => (
-          <li key={number} className="page-item"  >
-            <a onClick={() => paginate(number)} href="#" className="page-link">
+          <li key={pageNumbers.indexOf(number)} className={(pageNumber===number)? pageCSS2 : pageCSS}  >
+            <a onClick={() => onClickPage(number)} href="/#" className="page-link">
               {number}
             </a>
           </li>

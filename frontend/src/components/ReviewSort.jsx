@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { sortReviews } from "../features/reviews/reviewSlice";
 import sortasc from "../images/sort-up.svg";
 import sortdec from "../images/sort-down.svg";
+import { setPage } from "../features/pageSlice";
 
 function ReviewSort() {
   const { reviews } = useSelector((state) => state.review);
@@ -14,6 +15,7 @@ function ReviewSort() {
   const onChange = (e) => {
     if (e.target.id === "checkbox") {
       setDesc(e.currentTarget.checked);
+      dispatch(setPage(1))
 
       setcheckboxImg((prevsetcheckbox) => {
         if (prevsetcheckbox == sortasc) {
@@ -24,6 +26,7 @@ function ReviewSort() {
       });
     } else {
       setsortBy(e.currentTarget.value);
+      dispatch(setPage(1))
     }
   };
 

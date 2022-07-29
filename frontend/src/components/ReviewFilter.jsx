@@ -2,6 +2,7 @@ import { useState} from "react";
 import { useDispatch } from "react-redux";
 import { getReviews } from "../features/reviews/reviewSlice";
 import React from "react";
+import { setPage } from "../features/pageSlice";
 
 function ReviewFilter() {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ function ReviewFilter() {
   };
   const onSubmit = (e) => {
     e.preventDefault();
+    dispatch(setPage(1))
     dispatch(getReviews({ num, filterBy }), [num]);
     localStorage.setItem("filterSearch", filterBy);
     localStorage.setItem("filterValue", num);
@@ -29,7 +31,17 @@ function ReviewFilter() {
     }
   };
 
-  let dropdown;
+  let dropdown=  (
+    <>
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Please Pick what to filter by"
+        disabled
+        onChange={onChange}
+      />
+    </>
+  );
   if (filterBy === "Rating") {
     dropdown = (
       <>
@@ -45,7 +57,7 @@ function ReviewFilter() {
         />
       </>
     );
-  } else {
+  } else if(filterBy === "timePlayed"){
     dropdown = (
       <>
         <input

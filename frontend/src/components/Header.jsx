@@ -3,16 +3,21 @@ import { Link } from "react-router-dom";
 import bannerimg from "../images/gaming.png";
 
 function Header() {
+
+  const refresh = ()=>{
+    window.location.reload(true)
+  }
   return (
     <>
       {/* navbar */}
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-2 fixed-top">
-        <div className="container-fluid">
+        <div className="container-fluid" >
           <Link to="/" className="navbar-brand">
-            <img
+            <img 
               src={require("../images/yoyologo.png")}
               alt="logo"
               width="60"
+              onClick={refresh}
  
             />
           </Link>
