@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { deleteReview } from "../features/reviews/reviewSlice";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function ReviewItem({ review }) {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ function ReviewItem({ review }) {
     <div className="container-lg  p-5">
       <div className="row justify-content-md-center  p-5 bg-dark text-light border shadow border-info rounded">
         <div className="col-md-4 hide_border_sm text-center ">
-          <img
+          <LazyLoadImage
             src={img}
             className="img-fluid rounded-start img-thumbnail "
             alt="game thumnail"

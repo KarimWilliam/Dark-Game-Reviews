@@ -1,6 +1,7 @@
 //import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import { Link } from "react-router-dom";
 import bannerimg from "../images/gaming.png";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Header() {
 
@@ -13,8 +14,8 @@ function Header() {
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-2 fixed-top">
         <div className="container-fluid" >
           <Link to="/" className="navbar-brand">
-            <img 
-              src={require("../images/yoyologo.png")}
+            <LazyLoadImage 
+              src={require("../images/yoyologosmall.png")}
               alt="logo"
               width="60"
               onClick={refresh}
@@ -61,7 +62,7 @@ function Header() {
               </p>
             </div>
 
-            <img
+            <LazyLoadImage
               src={bannerimg}
               alt="game reviews banner"
               className="img-fluid my-3  d-none  d-sm-block"
