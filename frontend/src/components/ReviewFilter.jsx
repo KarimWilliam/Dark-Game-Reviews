@@ -84,8 +84,8 @@ function ReviewFilter() {
           </button>
         </form>
         <h6>
-          Filtering by: {localStorage.getItem("filterSearch")} &gt;
-          {localStorage.getItem("filterValue")}{" "}
+          Filtering by: {localStorage.getItem("filterSearch")*10} &gt;
+          {localStorage.getItem("filterValue")}
         </h6>
       </div>
     );
