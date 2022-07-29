@@ -61,7 +61,7 @@ pageNumbers=reducedPages(pageNumber,pageNumbers);
       <ul className="pagination justify-content-center pt-5">
       {prevkey}
         {pageNumbers.map((number) => (
-          <li key={number} className="page-item">
+          <li key={number} className="page-item"  >
             <a onClick={() => paginate(number)} href="#" className="page-link">
               {number}
             </a>

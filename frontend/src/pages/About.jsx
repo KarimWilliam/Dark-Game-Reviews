@@ -18,7 +18,7 @@ function About() {
                 <span className="fw-bold">Fiverr: </span> darkarim
               </li>
               <li className="list-group-item">
-                <span className="fw-bold">Email: </span> karim.william@gmail.com
+                <span className="fw-bold">Email: </span> karim.william7@gmail.com
               </li>
               <li className="list-group-item bg-dark">
                 <span className="fw-bold text-info ">You too can make your dream website a reality.<br/> Contact me NOW... Or later whenever is convenient </span> 
