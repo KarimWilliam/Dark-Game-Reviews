@@ -32,7 +32,7 @@ function Dashboard() {
   const currentreviews = reviews.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => {
-    if(pageNumber!=="..."){
+    if(pageNumber!=="..." &&pageNumber!==">>"  &&pageNumber!=="<<" ){
       dispatch(setPage(pageNumber))
     //  setCurrentPage(pageNumber);
     }

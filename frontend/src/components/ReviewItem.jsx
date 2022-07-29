@@ -1,8 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { deleteReview } from "../features/reviews/reviewSlice";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useState} from "react";
 
 function ReviewItem({ review }) {
+
+  const [imgCSS,setImgCSS] = useState("col-md-4 hide_border_sm text-center placeholder");
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   let button;
@@ -27,17 +30,20 @@ function ReviewItem({ review }) {
   
   return (
     //style={{ "maxHeight": 500 + "px" }}
-    <div className="container-lg  p-5">
-      <div className="row justify-content-md-center  p-5 bg-dark text-light border shadow border-info rounded">
-        <div className="col-md-4 hide_border_sm text-center ">
+    <div className="container-lg  p-5 placeholder-glow">
+      <div className="row justify-content-md-center  p-5 bg-dark text-light border shadow border-info rounded ">
+        <div className={imgCSS}>
           <LazyLoadImage
             src={img}
+            afterLoad={()=>{setImgCSS("col-md-4 hide_border_sm text-center")}}
             className="img-fluid rounded-start img-thumbnail "
             alt="game thumnail"
             style={{ "maxHeight": 350 + "px"}}
+       
           />
-        </div>
-        <div className="col-md-8 text-center flex-nowrap">
+          
+        </div >
+        <div className="col-md-8 text-center flex-nowrap ">
           <div className="row h-25  flex-md-nowrap">
             <div className="col-md-10 ">
               <h2 className="text-center text-uppercase text-underline">

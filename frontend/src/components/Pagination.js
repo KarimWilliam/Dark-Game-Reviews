@@ -18,9 +18,9 @@ const reducedPages=(pageNumber,pageNumbers)=>{
       return [1,2,3,4,5,"...",finalindex]
     }else if (pageNumber>=finalindex-3){return[1,"...",finalindex-4,finalindex-3,finalindex-2,finalindex-1,finalindex]}
     pageNumbers= pageNumbers.slice((pageNumber-3),(pageNumber+2))
-    pageNumbers.push("...")
+    pageNumbers.push(">>")
     pageNumbers.push(finalindex)
-    pageNumbers.unshift("...")
+    pageNumbers.unshift("<<")
     pageNumbers.unshift(1);
     return pageNumbers
 }
@@ -61,10 +61,6 @@ pageNumbers=reducedPages(pageNumber,pageNumbers);
 
 
 const onClickPage= (number)=>{
-  console.log("pagenumber: "+pageNumber)
-  console.log("number: "+number)
-
-
   paginate(number)
 }
 

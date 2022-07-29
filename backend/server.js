@@ -10,6 +10,7 @@ const app = express();
 
 connectDB();
 
+
 // Function to serve all static files
 // inside public directory.
 app.use(express.static(path.join('backend/images')));  //Serve static files/images
