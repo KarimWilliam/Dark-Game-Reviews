@@ -27,7 +27,7 @@ function ReviewFilter() {
     if (e.target.id === "filterBy") {
       setFilterBy(e.currentTarget.value);
     } else {
-      setNum(e.target.value);
+      setNum(e.target.value/10);
     }
   };
 
@@ -84,7 +84,7 @@ function ReviewFilter() {
           </button>
         </form>
         <h6>
-          Filtering by: {localStorage.getItem("filterSearch")} &gt;{" "}
+          Filtering by: {localStorage.getItem("filterSearch")} &gt;
           {localStorage.getItem("filterValue")}{" "}
         </h6>
       </div>
