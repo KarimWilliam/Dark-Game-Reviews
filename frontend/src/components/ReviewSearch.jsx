@@ -2,13 +2,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { bringToTop } from "../features/reviews/reviewSlice";
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import { setPage } from "../features/pageSlice";
-
+import Select from 'react-select'
 
 function ReviewSearch() {
   const { reviews } = useSelector((state) => state.review);
   const dispatch = useDispatch();
 let x= reviews.map((e)=>{
   return{
+    label:e.name,
     id:e._id,
     ...e
   }
@@ -60,6 +61,10 @@ let x= reviews.map((e)=>{
             //     // necessary, otherwise the results will be blank
           />
         </div>
+
+        {/* <div style={{ width: 300 }}>
+        <Select options={x} closeMenuOnScroll={true} onChange={handleOnSelect} getOptionValue={(x)=> x.label}  ValueContainer="bg-black"/>
+        </div> */}
     </div>
   )
 }
