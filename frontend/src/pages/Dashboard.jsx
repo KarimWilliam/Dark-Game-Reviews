@@ -56,7 +56,7 @@ function Dashboard() {
         <ReviewFilter />
       </div>
 
-      <div className=" align-items-center  justify-content-between p-5 bg-secondary container-lg">
+      <div className=" align-items-center  justify-content-between p-5 custombgcolor container-xxl">
         {reviews.length > 0 ? (
           <div className="goals">
             {currentreviews.map((review) => (

@@ -79,7 +79,7 @@ function ReviewFilter() {
     filtnum = (
       <div>
         <form onSubmit={onClearSubmit}>
-          <button className="btn btn-outline-primary" type="submit">
+          <button className="btn maincolor " type="submit">
             Clear Filter
           </button>
         </form>
@@ -119,7 +119,7 @@ function ReviewFilter() {
           </select>
         </label>
         {dropdown}
-        <button className="btn btn-outline-primary" type="submit">
+        <button className="btn maincolor " type="submit" >
           Filter
         </button>
       </form>

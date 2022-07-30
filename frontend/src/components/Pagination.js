@@ -67,7 +67,7 @@ const onClickPage= (number)=>{
 
   return (
     <nav>
-      <ul className="pagination justify-content-center pt-5">
+      <ul className="pagination justify-content-center  pt-5">
       {prevkey}
         {pageNumbers.map((number) => (
           <li key={pageNumbers.indexOf(number)} className={(pageNumber===number)? pageCSS2 : pageCSS}  >

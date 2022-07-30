@@ -77,3 +77,11 @@ body::before{
     background-color: #1db5d3 !important;
     border: solid 1px #1db5d3;
 }
+.custombgcolor{
+  background-color: #061f24 ;
+}
+
+.maincolor{
+  color: #0a9fbd;
+  border:1px solid #0a9fbd;
+}
