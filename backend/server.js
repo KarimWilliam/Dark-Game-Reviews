@@ -7,7 +7,6 @@ const connectDB = require("./config/db");
 const fileUpload = require("express-fileupload");
 const port = process.env.PORT || 5000;
 const app = express();
-const __dirname = path.resolve();
 connectDB();
 
 // Function to serve all static files
