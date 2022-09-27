@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getReviews } from "../features/reviews/reviewSlice";
 import React from "react";
@@ -16,7 +16,7 @@ function ReviewFilter() {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(setPage(1))
+    dispatch(setPage(1));
     dispatch(getReviews({ num, filterBy }), [num]);
     localStorage.setItem("filterSearch", filterBy);
     localStorage.setItem("filterValue", num);
@@ -27,11 +27,11 @@ function ReviewFilter() {
     if (e.target.id === "filterBy") {
       setFilterBy(e.currentTarget.value);
     } else {
-      setNum(e.target.value/10);
+      setNum(e.target.value / 10);
     }
   };
 
-  let dropdown=  (
+  let dropdown = (
     <>
       <input
         type="text"
@@ -57,7 +57,7 @@ function ReviewFilter() {
         />
       </>
     );
-  } else if(filterBy === "timePlayed"){
+  } else if (filterBy === "timePlayed") {
     dropdown = (
       <>
         <input
@@ -85,7 +85,7 @@ function ReviewFilter() {
         </form>
         <h6>
           Filtering by: {localStorage.getItem("filterSearch")} &gt;
-          {localStorage.getItem("filterValue")*10}
+          {localStorage.getItem("filterValue") * 10}
         </h6>
       </div>
     );
@@ -96,19 +96,16 @@ function ReviewFilter() {
       <form
         onSubmit={onSubmit}
         className="input-group"
-        style={{ maxWidth: 450 + "px" }}
-      >
+        style={{ maxWidth: 450 + "px" }}>
         <label>
           <select
             className="form-select"
             name="filterBy"
             id="filterBy"
             onChange={onChange}
-            defaultValue={'default'}
-          >
-            
-            <option  disabled value="default">
-            Filter by... 
+            defaultValue={"default"}>
+            <option disabled value="default">
+              Filter by...
             </option>
             <option value="Rating">
               Rating <>&gt;</>
@@ -119,7 +116,7 @@ function ReviewFilter() {
           </select>
         </label>
         {dropdown}
-        <button className="btn maincolor " type="submit" >
+        <button className="btn maincolor " type="submit">
           Filter
         </button>
       </form>

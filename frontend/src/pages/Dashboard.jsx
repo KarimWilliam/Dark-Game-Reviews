@@ -10,21 +10,18 @@ import { useState } from "react";
 import Pagination from "../components/Pagination";
 import { setPage } from "../features/pageSlice";
 
-
 function Dashboard() {
   const dispatch = useDispatch();
   //const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);
 
-  const {currentPage} = useSelector((state)=>state.page)
+  const { currentPage } = useSelector((state) => state.page);
 
   useEffect(() => {
     dispatch(getReviews());
   }, [dispatch]);
 
-  const { reviews, isLoading } = useSelector(
-    (state) => state.review
-  );
+  const { reviews, isLoading } = useSelector((state) => state.review);
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
@@ -32,11 +29,10 @@ function Dashboard() {
   const currentreviews = reviews.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => {
-    if(pageNumber!=="..." &&pageNumber!==">>"  &&pageNumber!=="<<" ){
-      dispatch(setPage(pageNumber))
-    //  setCurrentPage(pageNumber);
+    if (pageNumber !== "..." && pageNumber !== ">>" && pageNumber !== "<<") {
+      dispatch(setPage(pageNumber));
+      //  setCurrentPage(pageNumber);
     }
-
   };
 
   if (isLoading) {
@@ -49,8 +45,7 @@ function Dashboard() {
 
       <div
         className="align-items-center   justify-content-between p-5 border shadow bg-light  d-lg-flex"
-        style={{ "backgroundColor": "#FFFFFF" }}
-      >
+        style={{ backgroundColor: "#FFFFFF" }}>
         <ReviewSearch />
         <ReviewSort />
         <ReviewFilter />

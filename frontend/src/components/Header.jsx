@@ -1,25 +1,22 @@
 //import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import { Link } from "react-router-dom";
 import bannerimg from "../images/gaming.png";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Header() {
-
-  const refresh = ()=>{
-    window.location.reload(true)
-  }
+  const refresh = () => {
+    window.location.reload(true);
+  };
   return (
     <>
       {/* navbar */}
-      <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-2 fixed-top">
-        <div className="container-fluid" >
+      <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-2 px-4 fixed-top">
+        <div className="container-fluid">
           <Link to="/" className="navbar-brand">
-            <LazyLoadImage 
+            <LazyLoadImage
               src={require("../images/yoyologosmall.png")}
               alt="logo"
               width="60"
-              onClick={refresh}
- 
             />
           </Link>
 
@@ -27,8 +24,7 @@ function Header() {
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navmenu"
-          >
+            data-bs-target="#navmenu">
             <span className="navbar-toggler-icon"></span>
           </button>
 
@@ -57,8 +53,9 @@ function Header() {
             <div>
               <h1>Game Reviews </h1>
               <p className="lead">
-                I hope you enjoy my game reviews.<br/>feel free to look around and let me
-                know what you think!
+                I hope you enjoy my game reviews.
+                <br />
+                feel free to look around and let me know what you think!
               </p>
             </div>
 
@@ -66,7 +63,7 @@ function Header() {
               src={bannerimg}
               alt="game reviews banner"
               className="img-fluid my-3  d-none  d-sm-block"
-              style={{ "maxHeight": 150 + "px" }}
+              style={{ maxHeight: 150 + "px" }}
             />
           </div>
         </div>
