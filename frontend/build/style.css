@@ -1,0 +1,87 @@
+body::before{
+  display:block;
+  content:'';
+  height: 80px;
+}
+ /* Extra Small Devices, Phones */ 
+ @media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .sort_input {
+    width:75%;
+    max-width: 10px;
+  }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .hide_border_sm {
+    border-right:1px solid rgba(0, 255, 255,.75) !important;
+    
+  }
+}
+
+
+
+.rating{
+  height:0 !important; 
+  width:10% !important;
+  padding-bottom:20% !important;
+ background-color:red !important;
+}
+
+
+.custombggreen{
+  background-color: green;
+}
+
+.custombglightgreen{
+  background-color: yellowgreen;
+}
+
+.custombgorange{
+  background-color: orange;
+}
+
+.custombgdarkorange{
+  background-color: orangered;
+}
+.custombgred{
+  background-color: red;
+}
+
+.pagination > li > a
+{
+    background-color: white;
+    color: #0a9fbd;
+}
+
+.pagination > .active > a
+{
+    color: white !important;
+    background-color: #0a9fbd !important;
+    border: solid 1px #0a9fbd !important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #1db5d3 !important;
+    border: solid 1px #1db5d3;
+}
+.custombgcolor{
+  background-color: #061f24 ;
+}
+
+.maincolor{
+  color: #0a9fbd;
+  border:1px solid #0a9fbd;
+}

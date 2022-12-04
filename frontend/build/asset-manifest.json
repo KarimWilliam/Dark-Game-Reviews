@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.039bf95e.css",
+    "main.js": "/static/js/main.3c70bdcf.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/yoyologo.png": "/static/media/yoyologo.5bfb5aea3a09b83c3d28.png",
+    "static/media/gaming.png": "/static/media/gaming.ee5d185a2c528b2005ea.png",
+    "static/media/yoyologosmall.png": "/static/media/yoyologosmall.d4d4bc79f81d1a0a2a00.png",
+    "index.html": "/index.html",
+    "static/media/sort-down.svg": "/static/media/sort-down.5bf39ec273b3b6327c9dd53173b746dc.svg",
+    "static/media/sort-up.svg": "/static/media/sort-up.ea435e8427a3cd4110c7bef542b34a76.svg",
+    "static/media/arrow-up-circle.svg": "/static/media/arrow-up-circle.2c8fdb2f14a05c7ce8ee9eacfc9572eb.svg",
+    "main.039bf95e.css.map": "/static/css/main.039bf95e.css.map",
+    "main.3c70bdcf.js.map": "/static/js/main.3c70bdcf.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.039bf95e.css",
+    "static/js/main.3c70bdcf.js"
+  ]
+}

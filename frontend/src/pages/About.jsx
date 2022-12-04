@@ -23,7 +23,6 @@ function About() {
               </li>
               <li className="list-group-item bg-dark">
                 <span className="fw-bold text-info ">
-                  {" "}
                   I will professionally build your desired website with up to
                   date technology and industry standard methodology.
                   <br /> Contact me now... Or later whenever is convenient{" "}
