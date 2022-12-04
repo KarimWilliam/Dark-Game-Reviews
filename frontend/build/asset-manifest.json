@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.039bf95e.css",
-    "main.js": "/static/js/main.c5ce8d09.js",
+    "main.js": "/static/js/main.3c70bdcf.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/yoyologo.png": "/static/media/yoyologo.5bfb5aea3a09b83c3d28.png",
     "static/media/gaming.png": "/static/media/gaming.ee5d185a2c528b2005ea.png",
@@ -11,11 +11,11 @@
     "static/media/sort-up.svg": "/static/media/sort-up.ea435e8427a3cd4110c7bef542b34a76.svg",
     "static/media/arrow-up-circle.svg": "/static/media/arrow-up-circle.2c8fdb2f14a05c7ce8ee9eacfc9572eb.svg",
     "main.039bf95e.css.map": "/static/css/main.039bf95e.css.map",
-    "main.c5ce8d09.js.map": "/static/js/main.c5ce8d09.js.map",
+    "main.3c70bdcf.js.map": "/static/js/main.3c70bdcf.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.039bf95e.css",
-    "static/js/main.c5ce8d09.js"
+    "static/js/main.3c70bdcf.js"
   ]
 }
